@@ -1,0 +1,162 @@
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Mehānisma dokumentācija</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00695c;
+            padding: 30px 0 10px;
+        }
+
+        .gear-line {
+            text-align: center;
+            font-size: 24px;
+            color: #80cbc4;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #ffffffcc;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            height: fit-content;
+            font-weight: bold;
+            color: #00695c;
+        }
+
+        .accordion {
+            cursor: pointer;
+            padding: 18px 20px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .btn1 { background-color: #4db6ac; }
+        .btn2 { background-color: #ffb74d; }
+        .btn3 { background-color: #7986cb; }
+        .btn4 { background-color: #f06292; }
+        .btn5 { background-color: #ba68c8; }
+        .btn6 { background-color: #4fc3f7; }
+
+        .accordion:hover {
+            filter: brightness(110%);
+        }
+
+        .panel {
+            padding: 0 20px 20px 20px;
+            background-color: #ffffff;
+            display: none;
+            overflow: hidden;
+            border-radius: 0 0 10px 10px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+            line-height: 1.6;
+            animation: fadeIn 0.4s ease;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scaleY(0.95); }
+            to { opacity: 1; transform: scaleY(1); }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Kloķa-klāņa mehānisms</h1>
+<div class="gear-line">⚙️ ⚙️ ⚙️ ⚙️ ⚙️ ⚙️ ⚙️</div>
+
+<div class="container">
+    <div class="content">
+        <button class="accordion btn1">Nosaukums</button>
+        <div class="panel">
+            <p>Šajā projektā tiek pētīts kloķa-klāņa mehānisms, kur rotējoša kustība tiek pārveidota par lineāru kustību vai otrādi. Tas ir viens no būtiskākajiem mehānismiem tehnikā, īpaši dzinējos.</p>
+        </div>
+
+        <button class="accordion btn2">Pielietojums</button>
+        <div class="panel">
+            <p>To izmanto iekšdedzes dzinējos, kompresoros, šujmašīnās, sūkņos un citās iekārtās, kur nepieciešama kustības pārveide. Tas ir efektīvs un kompakts risinājums daudzās tehnoloģijās.</p>
+        </div>
+
+        <button class="accordion btn3">Mehānisma uzbūve un darbība</button>
+        <div class="panel">
+            <p>Mehānisms sastāv no kloķa, klāņa un virzuļa. Kloķis griežas, klāns nodrošina savienojumu, virzulis kustas lineāri. Rotācijas kustība pārvēršas svārstīgā lineārā kustībā vai otrādi.</p>
+            <img src="skice.png" alt="Mehānisma skice">
+        </div>
+
+        <button class="accordion btn4">Materiāli un īpašības</button>
+        <div class="panel">
+            <p>Izgatavots no metāla sakausējumiem (parasti tērauda), lai nodrošinātu izturību pret slodzēm un augstu temperatūru. Precīza apstrāde samazina berzi un palielina efektivitāti.</p>
+        </div>
+
+        <button class="accordion btn5">Shēma un enerģija</button>
+        <div class="panel">
+            <p>Enerģija rodas no sprādziena cilindrā (iekšdedzes dzinējs), kas virza virzuli uz leju. Tas, savukārt, kustina klāni, kas griež kloķvārpstu. Kustība tiek nodota citām detaļām.</p>
+        </div>
+
+        <button class="accordion btn6">Izvērtējums</button>
+        <div class="panel">
+            <p>Kloķa-klāņa mehānisms ir ļoti efektīvs. Uzlabojumi var būt, piemēram, labāka eļļošana, vieglāki materiāli un mazāka berze. Tas nodrošinātu ilgāku kalpošanu un lielāku efektivitāti.</p>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        Dāvids Vanags<br>9.a klase
+    </div>
+</div>
+
+<script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
